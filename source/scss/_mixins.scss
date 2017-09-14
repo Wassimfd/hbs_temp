@@ -1,3 +1,11 @@
+$breakpoints: (
+	"phablet"		: 640px,
+	"tablet"		: 768px,
+	"desktop"		: 1024px,
+	"desktop-large"	: 1280px,
+	"desktop-xlarge": 1600px
+) !default;
+
 @mixin for($breakpoint) {
 	@if map-has-key($breakpoints, $breakpoint) {
 		@media (min-width: map-get($breakpoints, $breakpoint)) {
