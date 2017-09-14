@@ -1,0 +1,20 @@
+
+
+// ---------------------------------------------------------------------------
+// Media queries
+
+$mq-tablet-portrait: 500px;
+$mq-tablet-horizontal: 768px;
+$mq-desktop: 1024px;
+$mq-desktop-large: 1280px;
+$mq-desktop-xlarge: 1600px;
+
+$page-size: 1280px;
+
+$breakpoints: (
+	"phablet"		: 640px,
+	"tablet"		: 768px,
+	"desktop"		: 1024px,
+	"desktop-large"	: 1280px,
+	"desktop-xlarge": 1600px
+) !default;

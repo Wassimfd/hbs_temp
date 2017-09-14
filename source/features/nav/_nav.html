@@ -1,0 +1,30 @@
+<nav class="nav">
+	<ul class="nav__list">
+		{{#each nav.items}}
+		<li class="nav__item">
+			<a href="{{this.url}}" class="nav__link">
+				{{this.text}}
+			</a>
+			{{#if this.submenu}}
+			{{#with this.submenu}}
+			<ul class="nav__sublist">
+			{{#each this.items}}
+			<li class="nav__subitem">
+				{{#ifequal this.isActive true}}
+				<a href="{{this.url}}" style="color: green;">
+					{{this.text}}
+				</a>
+				{{else}}
+				<a href="{{this.url}}" style="color: red;">
+					{{this.text}}
+				</a>
+				{{/ifequal}}
+			</li>
+			{{/each}}
+			</ul>
+			{{/with}}
+			{{/if}}
+		</li>
+		{{/each}}
+	</ul>
+</nav>

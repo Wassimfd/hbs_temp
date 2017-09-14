@@ -1,0 +1,30 @@
+{
+	"nav": {
+		"items": [
+			{
+				"text": "home",
+				"url": "/",
+				"color": "#fff"
+			},
+			{
+				"text": "Item1",
+				"url": "item1.html",
+				"color": "#f00",
+				"submenu": {
+					"items": [
+						{
+							"text": "Subitem1",
+							"url": "subitem1.html",
+							"isActive": true
+						},
+						{
+							"text": "Subitem2",
+							"url": "subitem2.html",
+							"isActive": false
+						}
+					]
+				}
+			}
+		]
+	}
+}

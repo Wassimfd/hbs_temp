@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+.input--hidden {
+  position: fixed;
+  top: 50%;
+  left: -99999px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 2em;
+  margin: .67em 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 1.5em;
+  margin: .83em 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: Georgia, serif;
+  font-size: 1.17em;
+  margin: 1em 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  margin: 1.33 0;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: Arial, sans-serif;
+  font-size: .83em;
+  margin: 1.67em 0;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=master.css.map */
