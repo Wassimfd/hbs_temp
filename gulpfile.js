@@ -9,12 +9,6 @@ var glob = require('glob');
 
 var data = require('./source/data/data.json');
 
-gulp.task('html:ssi', function() {
-	gulp.src('./source/**/*.html')
-		.pipe(includer())
-		.pipe(gulp.dest('./build/'));
-});
-
 // Converts object to array
 var objToArr = function (obj) {
     var arr = [];
