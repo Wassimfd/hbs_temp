@@ -7,6 +7,8 @@ $btn--theme: (
 $btn: (
 	"default": 
 		(
+			"position": relative,
+			"display": inline-block,
 			"padding": 1em 2em
 		),
 	"modifier": 
@@ -36,9 +38,9 @@ $btn: (
 }
 
 @mixin button($theme: $btn) {
-	position: relative;
-	width: 100px;
-	height: 100px;
+	@each $prop, $value in map-get($theme, "default") {
+		@include applyCSS($prop, $value);
+	}
 	@each $mod, $mod-name in map-get($theme, "modifier") {
 		&--#{$mod} {
 			@each $key, $value in $mod-name {
