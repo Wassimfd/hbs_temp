@@ -74,14 +74,15 @@ strong {
   font-weight: 600;
 }
 
-.nav {
-  display: none;
-}
-
 .button {
   position: relative;
   display: inline-block;
   padding: 1em 2em;
+}
+
+.button__link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .button--primary {
@@ -99,6 +100,7 @@ strong {
 .button--disabled {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=master.css.map */

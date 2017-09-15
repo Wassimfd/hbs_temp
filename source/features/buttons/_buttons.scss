@@ -5,12 +5,11 @@ $btn--theme: (
 );
 
 $btn: (
-	"default": 
-		(
-			"position": relative,
-			"display": inline-block,
-			"padding": 1em 2em
-		),
+	"pos": relative,
+	"dis": inline-block,
+	"pad": 1em 2em,
+	"txt-d": none,
+	"color": inherit,
 	"modifier": 
 		(	
 			"primary": 
@@ -28,7 +27,8 @@ $btn: (
 			"disabled": 
 				(
 					"background-color": rgba(0,0,0, .5),
-					"color": #fff
+					"color": #fff,
+					"pointer-events": none
 				)
 		)
 );
@@ -38,9 +38,15 @@ $btn: (
 }
 
 @mixin button($theme: $btn) {
-	@each $prop, $value in map-get($theme, "default") {
-		@include applyCSS($prop, $value);
+	position: map-get($theme, "pos");
+	display: map-get($theme, "dis");
+	padding: map-get($theme, "pad");
+	&__link {
+		text-decoration: map-get($theme, "txt-d");
+		color: map-get($theme, "color");
 	}
+
+	// Modifiers styling to be defined in theme map
 	@each $mod, $mod-name in map-get($theme, "modifier") {
 		&--#{$mod} {
 			@each $key, $value in $mod-name {
