@@ -4,11 +4,12 @@ $btn--theme: (
 	"theme-primary-color": $primary-color
 );
 
+
 $btn: (
-	"pos": relative,
-	"dis": inline-block,
-	"pad": 1em 2em,
-	"txt-d": none,
+	"position": relative,
+	"display": inline-block,
+	"padding": 1em 2em,
+	"text-decoration": none,
 	"color": inherit,
 	"modifier": 
 		(	
@@ -38,12 +39,13 @@ $btn: (
 }
 
 @mixin button($theme: $btn) {
-	position: map-get($theme, "pos");
-	display: map-get($theme, "dis");
+	$root: &;
+	position: map-get($theme, "position");
+	display: map-get($theme, "display");
 	&__link {
 		display: block;
-		padding: map-get($theme, "pad");
-		text-decoration: map-get($theme, "txt-d");
+		padding: map-get($theme, "padding");
+		text-decoration: map-get($theme, "text-decoration");
 		color: map-get($theme, "color");
 	}
 
