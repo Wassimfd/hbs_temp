@@ -40,8 +40,9 @@ $btn: (
 @mixin button($theme: $btn) {
 	position: map-get($theme, "pos");
 	display: map-get($theme, "dis");
-	padding: map-get($theme, "pad");
 	&__link {
+		display: block;
+		padding: map-get($theme, "pad");
 		text-decoration: map-get($theme, "txt-d");
 		color: map-get($theme, "color");
 	}
