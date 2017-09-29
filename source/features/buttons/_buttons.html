@@ -1,3 +1,21 @@
-<div class="button button--primary">Bonjour</div>
-<div class="button button--secondary">HI</div>
-<div class="button button--disabled">Ca va ?</div>
+{{#if this.icon}}
+<div class="button button--icon button--{{this.modifier}}">
+	<a href="{{this.url}}" class="button__link">
+		<span class="button__text">
+		{{this.text}}
+		</span>
+		{{#ifequal this.icon "cart"}}
+		<img src="cart" alt="" class="button__icon">
+		{{/ifequal}}
+		{{#ifequal this.icon "submit"}}
+		<img src="submit" alt="" class="button__icon">
+		{{/ifequal}}
+	</a>
+</div>
+{{else}}
+<div class="button button--{{this.modifier}}">
+	<a href="{{this.url}}" class="button__link">
+		{{this.text}}
+	</a>	
+</div>
+{{/if}}

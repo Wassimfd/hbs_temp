@@ -1,49 +1,41 @@
 $primary-color: #000;
+$secondary-color: #fff;
 
-$btn--theme: (
-	"theme-primary-color": $primary-color
+$btn-theme: (
+	"fz": 1.5em,
+	"theme-pri-color": $primary-color,
+	"theme-sec-color": $secondary-color
 );
 
-$btn: (
-	"default": 
-		(
-			"padding": 1em 2em
-		),
-	"modifier": 
-		(	
-			"primary": 
-				(
-					"background-color": map-get($btn--theme, "theme-primary-color"),
-					"color": #fff,
-					"font-size": 1em
-				),
-			"secondary": 
-				(
-					"background-color": #fff,
-					"color": #000,
-					"font-size": .7em
-				),
-			"disabled": 
-				(
-					"background-color": rgba(0,0,0, .5),
-					"color": #fff
-				)
-		)
-);
 
-@mixin applyCSS($a, $b) {
-	#{$a}: #{$b};
-}
-
-@mixin button($theme: $btn) {
+@mixin button($theme: $btn-theme) {
+	$root: &;
 	position: relative;
-	width: 100px;
-	height: 100px;
-	@each $mod, $mod-name in map-get($theme, "modifier") {
-		&--#{$mod} {
-			@each $key, $value in $mod-name {
-				@include applyCSS($key, $value);
-			}
+	display: inline-block;
+	margin: 1em 0;
+	font-size: map-get($theme, "fz");
+	&__link {
+		display: block;
+		padding: 1em 2em;
+		text-decoration: none;
+		color: inherit;
+	}
+	&--primary {
+		color: map-get($theme, "theme-sec-color");
+		background-color: map-get($theme, "theme-pri-color");
+	}
+	&--inverted {
+		color: map-get($theme, "theme-pri-color");
+		background-color: map-get($theme, "theme-sec-color");
+	}
+	&--outline {
+		position: relative;
+		color: map-get($theme, "theme-sec-color");
+		border: 1px solid map-get($theme, "theme-sec-color");
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
 		}
 	}
 }
