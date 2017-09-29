@@ -8,6 +8,7 @@ html, body {
 
 body {
   font-size: 16px;
+  background: #222;
 }
 
 .input--hidden {
@@ -77,6 +78,8 @@ strong {
 .button {
   position: relative;
   display: inline-block;
+  margin: 1em 0;
+  font-size: 1.5em;
 }
 
 .button__link {
@@ -87,21 +90,24 @@ strong {
 }
 
 .button--primary {
+  color: #fff;
   background-color: #000;
-  color: #fff;
-  font-size: 1em;
 }
 
-.button--secondary {
-  background-color: #fff;
+.button--inverted {
   color: #000;
-  font-size: 0.7em;
+  background-color: #fff;
 }
 
-.button--disabled {
-  background-color: rgba(0, 0, 0, 0.5);
+.button--outline {
+  position: relative;
   color: #fff;
-  pointer-events: none;
+  border: 1px solid #fff;
+}
+
+.button--outline::before, .button--outline::after {
+  content: '';
+  position: absolute;
 }
 
 /*# sourceMappingURL=master.css.map */
